@@ -1,4 +1,5 @@
-import React, { HTMLAttributes } from 'react';
+import React from 'react';
+import type { HTMLAttributes } from 'react';
 
 interface PanelProps extends HTMLAttributes<HTMLDivElement> {
   variant?: 'solid' | 'transparent';

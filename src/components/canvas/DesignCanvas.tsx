@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
 import { Stage, Layer } from 'react-konva';
 import { useCanvasStore } from '../../store/useCanvasStore';
 import { EditableElement } from './EditableElement';

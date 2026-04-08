@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
-import { Square, Circle, Triangle, Type, Image as ImageIcon, Download, Trash2, Layers, Share2 } from 'lucide-react';
+import { Square, Circle, Triangle, Type, Image as ImageIcon, Download } from 'lucide-react';
 import { useCanvasStore } from '../store/useCanvasStore';
 import { Panel } from './ui/Panel';
 import { Button } from './ui/Button';
 
 export const Sidebar: React.FC = () => {
   const addElement = useCanvasStore((state) => state.addElement);
-  const elements = useCanvasStore((state) => state.elements);
   
+
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleAddRect = () => {
@@ -93,8 +93,7 @@ export const Sidebar: React.FC = () => {
   };
 
   const handleExport = () => {
-    const stage = document.getElementById('konva-stage') as any;
-    // We expect the user to integrate actual Konva stage ref, but 
+    // We expect the user to integrate actual Konva stage ref, but
     // retrieving via document id and Konva.stages works too.
     // Better yet, pass a custom event or simply access window.Konva
     const konvaStage = (window as any).Konva?.stages[0];

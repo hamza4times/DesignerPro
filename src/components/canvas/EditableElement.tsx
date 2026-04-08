@@ -1,5 +1,5 @@
-import React, { useRef, useEffect, useState } from 'react';
-import { Shape, Rect, Circle, Text, Image as KonvaImage, Transformer, RegularPolygon } from 'react-konva';
+import React, { useRef, useEffect } from 'react';
+import { Rect, Circle, Text, Image as KonvaImage, Transformer, RegularPolygon } from 'react-konva';
 import useImage from 'use-image';
 import { useCanvasStore, type CanvasElement } from '../../store/useCanvasStore';
 import Konva from 'konva';
@@ -63,7 +63,7 @@ export const EditableElement: React.FC<Props> = ({ element, isSelected }) => {
     });
   };
 
-  const handleTransformEnd = (e: any) => {
+  const handleTransformEnd = (_e: any) => {
     const node = shapeRef.current;
     const scaleX = node.scaleX();
     const scaleY = node.scaleY();

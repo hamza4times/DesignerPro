@@ -44,7 +44,7 @@ interface CanvasState {
   setElements: (elements: CanvasElement[]) => void;
 }
 
-export const useCanvasStore = create<CanvasState>((set, get) => ({
+export const useCanvasStore = create<CanvasState>((set) => ({
   elements: [],
   selectedId: null,
   history: [[]],
