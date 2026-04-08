@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap');
+
+:root {
+  /* Neobrutalism Colors */
+  --bg-color: #fafafa;
+  --text-color: #000000;
+  
+  --primary: #ffeb3b; /* Vibrant Yellow */
+  --secondary: #ff00ff; /* Neon Pink */
+  --tertiary: #00ffff; /* Cyan */
+  --accent: #ff4500; /* Orange Red */
+  
+  --gray-light: #e0e0e0;
+  --gray-dark: #333333;
+
+  /* Borders & Shadows */
+  --border-thick: 4px solid #000000;
+  --border-thin: 2px solid #000000;
+  
+  --shadow-sm: 4px 4px 0px 0px #000000;
+  --shadow-md: 8px 8px 0px 0px #000000;
+  --shadow-lg: 12px 12px 0px 0px #000000;
+  
+  --shadow-hover-sm: 2px 2px 0px 0px #000000;
+  --shadow-hover-md: 4px 4px 0px 0px #000000;
+
+  /* Typography */
+  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+  
+  /* Layout */
+  --header-height: 80px;
+  --sidebar-width: 300px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-mono);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  background-image: radial-gradient(var(--gray-light) 1px, transparent 0);
+  background-size: 20px 20px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+button {
+  font-family: var(--font-mono);
+  font-weight: bold;
+  cursor: pointer;
+  border: var(--border-thick);
+  background-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-hover-sm);
+}
+
+button:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+input, select, textarea {
+  font-family: var(--font-mono);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-sm);
+  padding: 0.5rem;
+  background: white;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  background: var(--tertiary);
+}
+
+/* Custom Scrollbar for Neo-brutalism */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+  border-left: var(--border-thick);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border: var(--border-thick);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bg-color);
+}
